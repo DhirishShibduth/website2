@@ -1,0 +1,20 @@
+{
+  "name": "@shadcn-angular/theme",
+  "version": "0.1.0",
+  "description": "TailwindCSS theme configuration and design tokens",
+  "main": "tailwind.config.js",
+  "files": [
+    "tailwind.config.js",
+    "globals.css",
+    "tokens.json"
+  ],
+  "keywords": [
+    "tailwind",
+    "theme",
+    "design-tokens"
+  ],
+  "peerDependencies": {
+    "tailwindcss": "^3.4.0"
+  },
+  "license": "MIT"
+}

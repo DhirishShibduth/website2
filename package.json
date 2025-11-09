@@ -1,0 +1,33 @@
+{
+  "name": "@shadcn-angular/root",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A ShadCN-inspired component library for Angular",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm run build:ui",
+    "build:ui": "cd packages/ui && npm run build",
+    "build:cli": "cd packages/cli && npm run build",
+    "build": "npm run build:ui && npm run build:cli",
+    "storybook": "cd packages/ui && npm run storybook",
+    "build-storybook": "cd packages/ui && npm run build-storybook",
+    "demo": "cd examples/demo-app && npm start"
+  },
+  "keywords": [
+    "angular",
+    "components",
+    "ui",
+    "tailwind",
+    "shadcn",
+    "headless"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "~5.3.0"
+  }
+}

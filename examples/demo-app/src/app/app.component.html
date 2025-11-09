@@ -1,0 +1,297 @@
+<!-- Main Container -->
+<div class="min-h-screen bg-background text-foreground">
+  <!-- Header -->
+  <header class="border-b">
+    <div class="container mx-auto px-4 py-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <h1 class="text-3xl font-bold">{{ title }}</h1>
+          <p class="text-muted-foreground mt-1">
+            A ShadCN-inspired component library for Angular
+          </p>
+        </div>
+        <button
+          uiButton
+          variant="outline"
+          size="icon"
+          (click)="toggleDarkMode()"
+          title="Toggle theme"
+        >
+          <svg
+            *ngIf="!darkMode"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="m4.93 4.93 1.41 1.41" />
+            <path d="m17.66 17.66 1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="m6.34 17.66-1.41 1.41" />
+            <path d="m19.07 4.93-1.41 1.41" />
+          </svg>
+          <svg
+            *ngIf="darkMode"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-8 space-y-12">
+    <!-- Buttons Section -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4">Buttons</h2>
+      <ui-card>
+        <ui-card-header>
+          <ui-card-title>Button Variants</ui-card-title>
+          <ui-card-description>
+            Different button styles for various use cases
+          </ui-card-description>
+        </ui-card-header>
+        <ui-card-content>
+          <div class="flex flex-wrap gap-4">
+            <button uiButton variant="default">Default</button>
+            <button uiButton variant="destructive">Destructive</button>
+            <button uiButton variant="outline">Outline</button>
+            <button uiButton variant="secondary">Secondary</button>
+            <button uiButton variant="ghost">Ghost</button>
+            <button uiButton variant="link">Link</button>
+          </div>
+
+          <h3 class="text-lg font-semibold mt-6 mb-3">Button Sizes</h3>
+          <div class="flex items-center gap-4">
+            <button uiButton size="sm">Small</button>
+            <button uiButton size="default">Default</button>
+            <button uiButton size="lg">Large</button>
+          </div>
+        </ui-card-content>
+      </ui-card>
+    </section>
+
+    <!-- Inputs Section -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4">Inputs</h2>
+      <ui-card>
+        <ui-card-header>
+          <ui-card-title>Form Inputs</ui-card-title>
+          <ui-card-description>
+            Styled input components for forms
+          </ui-card-description>
+        </ui-card-header>
+        <ui-card-content>
+          <div class="grid gap-6 max-w-md">
+            <div class="grid gap-2">
+              <label for="name" class="text-sm font-medium">Name</label>
+              <input
+                uiInput
+                id="name"
+                type="text"
+                placeholder="Enter your name"
+                [(ngModel)]="name"
+              />
+            </div>
+
+            <div class="grid gap-2">
+              <label for="email" class="text-sm font-medium">Email</label>
+              <input
+                uiInput
+                id="email"
+                type="email"
+                placeholder="email@example.com"
+                [(ngModel)]="email"
+              />
+            </div>
+
+            <div class="grid gap-2">
+              <label for="password" class="text-sm font-medium">Password</label>
+              <input
+                uiInput
+                id="password"
+                type="password"
+                placeholder="Enter password"
+              />
+            </div>
+
+            <div class="grid gap-2">
+              <label for="message" class="text-sm font-medium">Message</label>
+              <textarea
+                uiInput
+                id="message"
+                placeholder="Type your message here..."
+                rows="4"
+              ></textarea>
+            </div>
+
+            <div class="grid gap-2">
+              <label for="disabled" class="text-sm font-medium">Disabled Input</label>
+              <input
+                uiInput
+                id="disabled"
+                type="text"
+                placeholder="Disabled"
+                [disabled]="true"
+              />
+            </div>
+          </div>
+        </ui-card-content>
+      </ui-card>
+    </section>
+
+    <!-- Badges Section -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4">Badges</h2>
+      <ui-card>
+        <ui-card-header>
+          <ui-card-title>Badge Variants</ui-card-title>
+          <ui-card-description>
+            Small labels for status and categories
+          </ui-card-description>
+        </ui-card-header>
+        <ui-card-content>
+          <div class="flex flex-wrap gap-4">
+            <span uiBadge variant="default">Default</span>
+            <span uiBadge variant="secondary">Secondary</span>
+            <span uiBadge variant="destructive">Destructive</span>
+            <span uiBadge variant="outline">Outline</span>
+          </div>
+        </ui-card-content>
+      </ui-card>
+    </section>
+
+    <!-- Dialog Section -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4">Dialog</h2>
+      <ui-card>
+        <ui-card-header>
+          <ui-card-title>Modal Dialog</ui-card-title>
+          <ui-card-description>
+            Interactive modal with overlay
+          </ui-card-description>
+        </ui-card-header>
+        <ui-card-content>
+          <button uiButton (click)="openDialog()">Open Dialog</button>
+        </ui-card-content>
+      </ui-card>
+    </section>
+
+    <!-- Cards Section -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4">Cards</h2>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <ui-card>
+          <ui-card-header>
+            <ui-card-title>Card Title</ui-card-title>
+            <ui-card-description>Card description goes here</ui-card-description>
+          </ui-card-header>
+          <ui-card-content>
+            <p>This is the card content. You can put any content here.</p>
+          </ui-card-content>
+          <ui-card-footer>
+            <button uiButton class="w-full">Action</button>
+          </ui-card-footer>
+        </ui-card>
+
+        <ui-card>
+          <ui-card-header>
+            <ui-card-title>Another Card</ui-card-title>
+            <ui-card-description>With different content</ui-card-description>
+          </ui-card-header>
+          <ui-card-content>
+            <div class="space-y-2">
+              <p class="text-sm">Feature 1</p>
+              <p class="text-sm">Feature 2</p>
+              <p class="text-sm">Feature 3</p>
+            </div>
+          </ui-card-content>
+        </ui-card>
+
+        <ui-card>
+          <ui-card-header>
+            <ui-card-title>Notifications</ui-card-title>
+          </ui-card-header>
+          <ui-card-content>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <span uiBadge variant="default">New</span>
+                <div class="space-y-1">
+                  <p class="text-sm font-medium">Update available</p>
+                  <p class="text-sm text-muted-foreground">A new version is ready</p>
+                </div>
+              </div>
+            </div>
+          </ui-card-content>
+        </ui-card>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t mt-12">
+    <div class="container mx-auto px-4 py-6 text-center text-muted-foreground">
+      <p>Built with Angular and TailwindCSS</p>
+    </div>
+  </footer>
+</div>
+
+<!-- Dialog Component -->
+<ui-dialog [open]="isDialogOpen" (openChange)="isDialogOpen = $event">
+  <ui-dialog-content>
+    <ui-dialog-header>
+      <ui-dialog-title>Edit Profile</ui-dialog-title>
+      <ui-dialog-description>
+        Make changes to your profile here. Click save when you're done.
+      </ui-dialog-description>
+    </ui-dialog-header>
+
+    <div class="grid gap-4 py-4">
+      <div class="grid gap-2">
+        <label for="dialog-name" class="text-sm font-medium">Name</label>
+        <input
+          uiInput
+          id="dialog-name"
+          [(ngModel)]="name"
+          placeholder="John Doe"
+        />
+      </div>
+      <div class="grid gap-2">
+        <label for="dialog-email" class="text-sm font-medium">Email</label>
+        <input
+          uiInput
+          id="dialog-email"
+          type="email"
+          [(ngModel)]="email"
+          placeholder="john@example.com"
+        />
+      </div>
+    </div>
+
+    <ui-dialog-footer>
+      <button uiButton variant="outline" (click)="isDialogOpen = false">
+        Cancel
+      </button>
+      <button uiButton (click)="handleSubmit()">Save changes</button>
+    </ui-dialog-footer>
+  </ui-dialog-content>
+</ui-dialog>
