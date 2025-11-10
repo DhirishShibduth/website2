@@ -1,10 +1,10 @@
-# @shadcn-angular/ui
+# @component-library/ui
 
-UI component library for shadcn-angular.
+UI component library for component-library.
 
 ## Overview
 
-This package contains the source code for all shadcn-angular components. Components are designed to be copied into your project using the `shadcn-ng` CLI tool rather than installed as a dependency.
+This package contains the source code for all component-library components. Components are designed to be copied into your project using the `component-library` CLI tool rather than installed as a dependency.
 
 ## Components
 
@@ -19,7 +19,7 @@ This package contains the source code for all shadcn-angular components. Compone
 Don't install this package directly. Instead, use the CLI:
 
 ```bash
-npx shadcn-ng add button
+npx component-library add button
 ```
 
 This copies the component source code into your project where you can customize it.

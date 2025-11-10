@@ -1,7 +1,7 @@
 /**
  * App Component
  *
- * Main component showcasing all shadcn-angular components
+ * Main component showcasing all component library components
  */
 
 import { Component } from '@angular/core';
@@ -9,8 +9,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 // Import all components
-import { ButtonComponent } from '@shadcn-angular/ui/button/button.component';
-import { InputComponent } from '@shadcn-angular/ui/input/input.component';
+import { ButtonComponent } from '@component-library/ui/button/button.component';
+import { InputComponent } from '@component-library/ui/input/input.component';
 import {
   DialogComponent,
   DialogContentComponent,
@@ -18,7 +18,7 @@ import {
   DialogFooterComponent,
   DialogTitleComponent,
   DialogDescriptionComponent,
-} from '@shadcn-angular/ui/dialog/dialog.component';
+} from '@component-library/ui/dialog/dialog.component';
 import {
   CardComponent,
   CardHeaderComponent,
@@ -26,8 +26,8 @@ import {
   CardDescriptionComponent,
   CardContentComponent,
   CardFooterComponent,
-} from '@shadcn-angular/ui/card/card.component';
-import { BadgeComponent } from '@shadcn-angular/ui/badge/badge.component';
+} from '@component-library/ui/card/card.component';
+import { BadgeComponent } from '@component-library/ui/badge/badge.component';
 
 @Component({
   selector: 'app-root',
@@ -55,7 +55,7 @@ import { BadgeComponent } from '@shadcn-angular/ui/badge/badge.component';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'shadcn-angular Demo';
+  title = 'Component Library Demo';
   darkMode = false;
   isDialogOpen = false;
   email = '';

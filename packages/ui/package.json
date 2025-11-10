@@ -1,5 +1,5 @@
 {
-  "name": "@shadcn-angular/ui",
+  "name": "@component-library/ui",
   "version": "0.1.0",
   "description": "Angular UI components with Tailwind styling",
   "main": "dist/index.js",

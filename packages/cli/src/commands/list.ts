@@ -45,7 +45,7 @@ export function list() {
   });
 
   console.log(chalk.bold('\n📦 Usage:\n'));
-  console.log(`  ${chalk.cyan('npx shadcn-ng add button')}     - Add a single component`);
-  console.log(`  ${chalk.cyan('npx shadcn-ng add button input')} - Add multiple components`);
-  console.log(`  ${chalk.cyan('npx shadcn-ng add --all')}       - Add all components\n`);
+  console.log(`  ${chalk.cyan('npx component-library add button')}     - Add a single component`);
+  console.log(`  ${chalk.cyan('npx component-library add button input')} - Add multiple components`);
+  console.log(`  ${chalk.cyan('npx component-library add --all')}       - Add all components\n`);
 }

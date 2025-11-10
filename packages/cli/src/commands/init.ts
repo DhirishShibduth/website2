@@ -1,7 +1,7 @@
 /**
  * Init Command
  *
- * Initializes shadcn-angular in an Angular project by:
+ * Initializes component library in an Angular project by:
  * 1. Creating components directory structure
  * 2. Copying utility functions (cn, cva)
  * 3. Setting up Tailwind configuration
@@ -19,10 +19,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 /**
- * Initializes the project with shadcn-angular configuration
+ * Initializes the project with component library configuration
  */
 export async function init() {
-  console.log(chalk.bold('\n🎨 shadcn-angular initialization\n'));
+  console.log(chalk.bold('\n🎨 Component Library initialization\n'));
 
   // Prompt for configuration
   const response = await prompts([
@@ -51,7 +51,7 @@ export async function init() {
     process.exit(0);
   }
 
-  const spinner = ora('Initializing shadcn-angular...').start();
+  const spinner = ora('Initializing component library...').start();
 
   try {
     // Create directories
@@ -93,16 +93,16 @@ export async function init() {
     };
 
     fs.writeFileSync(
-      path.join(process.cwd(), 'shadcn-ng.json'),
+      path.join(process.cwd(), 'component-library.json'),
       JSON.stringify(config, null, 2)
     );
 
     spinner.succeed(chalk.green('✅ Initialization complete!'));
 
     console.log(chalk.bold('\n📦 What\'s next?\n'));
-    console.log(`  ${chalk.cyan('npx shadcn-ng add button')} - Add the button component`);
-    console.log(`  ${chalk.cyan('npx shadcn-ng list')} - View all available components`);
-    console.log(`  ${chalk.cyan('npx shadcn-ng add --all')} - Add all components\n`);
+    console.log(`  ${chalk.cyan('npx component-library add button')} - Add the button component`);
+    console.log(`  ${chalk.cyan('npx component-library list')} - View all available components`);
+    console.log(`  ${chalk.cyan('npx component-library add --all')} - Add all components\n`);
   } catch (error) {
     spinner.fail(chalk.red('Initialization failed'));
     console.error(error);

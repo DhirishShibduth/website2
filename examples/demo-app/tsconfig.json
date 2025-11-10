@@ -19,8 +19,8 @@
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
     "paths": {
-      "@shadcn-angular/ui": ["../../packages/ui/src/index.ts"],
-      "@shadcn-angular/ui/*": ["../../packages/ui/src/*"]
+      "@component-library/ui": ["../../packages/ui/src/index.ts"],
+      "@component-library/ui/*": ["../../packages/ui/src/*"]
     }
   },
   "angularCompilerOptions": {

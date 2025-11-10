@@ -1,8 +1,8 @@
 {
-  "name": "@shadcn-angular/root",
+  "name": "@component-library/root",
   "version": "0.1.0",
   "private": true,
-  "description": "A ShadCN-inspired component library for Angular",
+  "description": "A modern component library for Angular",
   "workspaces": [
     "packages/*",
     "examples/*"
@@ -21,7 +21,7 @@
     "components",
     "ui",
     "tailwind",
-    "shadcn",
+    "component-library",
     "headless"
   ],
   "author": "",

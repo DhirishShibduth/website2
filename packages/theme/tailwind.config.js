@@ -1,7 +1,7 @@
 /**
- * ShadCN Angular Theme Configuration
+ * Component Library Theme Configuration
  *
- * This Tailwind config provides design tokens compatible with shadcn/ui theming system.
+ * This Tailwind config provides design tokens for the component library.
  * It uses HSL color values with CSS variables for easy theme switching.
  */
 

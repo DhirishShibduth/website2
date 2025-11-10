@@ -12,8 +12,8 @@ import {
   DialogFooterComponent,
   DialogTitleComponent,
   DialogDescriptionComponent
-} from '@shadcn-angular/ui/dialog';
-import { ButtonComponent } from '@shadcn-angular/ui/button';
+} from '@component-library/ui/dialog';
+import { ButtonComponent } from '@component-library/ui/button';
 
 @Component({
   standalone: true,

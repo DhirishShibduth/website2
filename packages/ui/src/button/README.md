@@ -5,7 +5,7 @@ A customizable button component with multiple variants and sizes.
 ## Usage
 
 ```typescript
-import { ButtonComponent } from '@shadcn-angular/ui/button';
+import { ButtonComponent } from '@component-library/ui/button';
 
 @Component({
   standalone: true,

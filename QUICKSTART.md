@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-Get up and running with shadcn-angular in 5 minutes!
+Get up and running with component-library in 5 minutes!
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ Get up and running with shadcn-angular in 5 minutes!
 Run this command in your Angular project root:
 
 ```bash
-npx shadcn-ng init
+npx component-library init
 ```
 
 You'll be prompted for:
@@ -35,7 +35,7 @@ your-project/
 │   │           └── cva.ts  # Class variance authority
 │   └── styles.css          # Updated with design tokens
 ├── tailwind.config.js      # Tailwind configuration
-└── shadcn-ng.json          # shadcn-ng configuration
+└── component-library.json          # component-library configuration
 ```
 
 ### 2. Add Your First Component
@@ -43,7 +43,7 @@ your-project/
 Add the button component:
 
 ```bash
-npx shadcn-ng add button
+npx component-library add button
 ```
 
 This copies the button component to `src/app/components/button/`.
@@ -83,18 +83,18 @@ Visit http://localhost:4200 and you should see your styled button!
 
 ```bash
 # Add individual components
-npx shadcn-ng add input
-npx shadcn-ng add dialog
-npx shadcn-ng add card
+npx component-library add input
+npx component-library add dialog
+npx component-library add card
 
 # Or add all at once
-npx shadcn-ng add --all
+npx component-library add --all
 ```
 
 ### View Available Components
 
 ```bash
-npx shadcn-ng list
+npx component-library list
 ```
 
 ### Enable Dark Mode

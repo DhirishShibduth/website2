@@ -1,7 +1,7 @@
 /**
- * @shadcn-angular/ui
+ * @component-library/ui
  *
- * A ShadCN-inspired component library for Angular with Tailwind CSS.
+ * A modern component library for Angular with Tailwind CSS.
  * Provides headless, customizable components following the copy-and-own philosophy.
  *
  * @packageDocumentation

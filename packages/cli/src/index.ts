@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 
 /**
- * shadcn-ng CLI
+ * Component Library CLI
  *
- * A CLI tool for adding shadcn-angular components to your Angular project.
+ * A CLI tool for adding component library components to your Angular project.
  * Follows the copy-and-own philosophy - components are copied into your project
  * rather than installed as dependencies.
  *
  * Usage:
- *   npx shadcn-ng init          - Initialize shadcn-angular in your project
- *   npx shadcn-ng add <component> - Add a component to your project
- *   npx shadcn-ng add button input dialog - Add multiple components
+ *   npx component-library init          - Initialize component library in your project
+ *   npx component-library add <component> - Add a component to your project
+ *   npx component-library add button input dialog - Add multiple components
  */
 
 import { Command } from 'commander';
@@ -21,8 +21,8 @@ import { list } from './commands/list.js';
 const program = new Command();
 
 program
-  .name('shadcn-ng')
-  .description('Add shadcn-angular components to your Angular project')
+  .name('component-library')
+  .description('Add component library components to your Angular project')
   .version('0.1.0');
 
 /**
@@ -30,7 +30,7 @@ program
  */
 program
   .command('init')
-  .description('Initialize shadcn-angular in your project')
+  .description('Initialize component library in your project')
   .action(init);
 
 /**

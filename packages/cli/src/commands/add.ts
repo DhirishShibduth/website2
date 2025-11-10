@@ -2,7 +2,7 @@
  * Add Command
  *
  * Adds one or more components to the user's Angular project by copying
- * component files from the shadcn-angular library.
+ * component files from the component library.
  */
 
 import * as fs from 'fs';
@@ -55,11 +55,11 @@ const COMPONENTS_MAP = {
  * Reads the project configuration
  */
 function getConfig() {
-  const configPath = path.join(process.cwd(), 'shadcn-ng.json');
+  const configPath = path.join(process.cwd(), 'component-library.json');
 
   if (!fs.existsSync(configPath)) {
     console.log(chalk.red('\n❌ Configuration file not found!'));
-    console.log(chalk.yellow('Please run: npx shadcn-ng init\n'));
+    console.log(chalk.yellow('Please run: npx component-library init\n'));
     process.exit(1);
   }
 
@@ -111,7 +111,7 @@ export async function add(
 
   if (invalidComponents.length > 0) {
     console.log(chalk.red(`\n❌ Invalid components: ${invalidComponents.join(', ')}`));
-    console.log(chalk.yellow('Run: npx shadcn-ng list to see available components\n'));
+    console.log(chalk.yellow('Run: npx component-library list to see available components\n'));
     process.exit(1);
   }
 

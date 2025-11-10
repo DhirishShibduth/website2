@@ -1,6 +1,6 @@
-# Contributing to shadcn-angular
+# Contributing to component-library
 
-Thank you for your interest in contributing to shadcn-angular! This guide will help you get started.
+Thank you for your interest in contributing to component-library! This guide will help you get started.
 
 ## 🚀 Getting Started
 
@@ -16,8 +16,8 @@ Thank you for your interest in contributing to shadcn-angular! This guide will h
 1. **Fork and Clone**
 
 ```bash
-git clone https://github.com/your-username/shadcn-angular.git
-cd shadcn-angular
+git clone https://github.com/your-username/component-library.git
+cd component-library
 ```
 
 2. **Install Dependencies**
@@ -35,7 +35,7 @@ npm run build
 ## 📦 Project Structure
 
 ```
-shadcn-angular/
+component-library/
 ├── packages/
 │   ├── ui/          # Component library
 │   ├── theme/       # Tailwind configuration
@@ -342,7 +342,7 @@ What should happen
 
 **Environment**
 - Angular version:
-- shadcn-angular version:
+- component-library version:
 - Browser:
 ```
 
@@ -376,4 +376,4 @@ By contributing, you agree that your contributions will be licensed under the MI
 
 ## 🙏 Thank You
 
-Your contributions make shadcn-angular better for everyone!
+Your contributions make component-library better for everyone!

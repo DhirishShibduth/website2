@@ -1,10 +1,10 @@
-# shadcn-angular
+# component-library
 
-A **ShadCN-inspired** component library for **Angular 18+** that combines the power of **TailwindCSS** with the flexibility of the **copy-and-own** philosophy.
+A **modern** component library for **Angular 18+** that combines the power of **TailwindCSS** with the flexibility of the **copy-and-own** philosophy.
 
 ## 🎯 Philosophy
 
-Unlike traditional component libraries installed via npm, shadcn-angular follows the **copy-and-own** model:
+Unlike traditional component libraries installed via npm, component-library follows the **copy-and-own** model:
 
 - **Own Your Components**: Components are copied directly into your project
 - **Full Control**: Modify, customize, and extend components as needed
@@ -16,7 +16,7 @@ Unlike traditional component libraries installed via npm, shadcn-angular follows
 
 - 🎨 **Beautiful Components** - Clean, modern design with dark mode support
 - 🔧 **Fully Customizable** - Modify components directly in your codebase
-- 📦 **CLI Tool** - Easy installation with `npx shadcn-ng add [component]`
+- 📦 **CLI Tool** - Easy installation with `npx component-library add [component]`
 - 🎭 **Headless Architecture** - Logic separated from styling
 - 🌗 **Dark Mode** - Built-in dark mode support with CSS variables
 - 📚 **Storybook** - Interactive component documentation
@@ -39,12 +39,12 @@ Unlike traditional component libraries installed via npm, shadcn-angular follows
 - Angular CLI 18+
 - An Angular project
 
-### Step 1: Initialize shadcn-angular
+### Step 1: Initialize component-library
 
 Run the initialization command in your Angular project:
 
 ```bash
-npx shadcn-ng init
+npx component-library init
 ```
 
 This will:
@@ -59,13 +59,13 @@ Add components to your project:
 
 ```bash
 # Add a single component
-npx shadcn-ng add button
+npx component-library add button
 
 # Add multiple components
-npx shadcn-ng add button input dialog
+npx component-library add button input dialog
 
 # Add all components
-npx shadcn-ng add --all
+npx component-library add --all
 ```
 
 ### Step 3: Use Components
@@ -223,7 +223,7 @@ Since components are copied to your project, you can customize them freely:
 ## 🏗️ Project Structure
 
 ```
-shadcn-angular/
+component-library/
 ├── packages/
 │   ├── ui/                   # Component library
 │   │   ├── src/
@@ -256,7 +256,7 @@ shadcn-angular/
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd shadcn-angular
+cd component-library
 
 # Install dependencies
 npm install
@@ -297,10 +297,10 @@ npm run build
 
 ### `init`
 
-Initialize shadcn-angular in your project:
+Initialize component-library in your project:
 
 ```bash
-npx shadcn-ng init
+npx component-library init
 ```
 
 Options:
@@ -314,13 +314,13 @@ Add components to your project:
 
 ```bash
 # Interactive selection
-npx shadcn-ng add
+npx component-library add
 
 # Specific components
-npx shadcn-ng add button input
+npx component-library add button input
 
 # All components
-npx shadcn-ng add --all
+npx component-library add --all
 ```
 
 ### `list`
@@ -328,7 +328,7 @@ npx shadcn-ng add --all
 List all available components:
 
 ```bash
-npx shadcn-ng list
+npx component-library list
 ```
 
 ## 🎯 Design Tokens

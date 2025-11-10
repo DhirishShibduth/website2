@@ -1,8 +1,8 @@
 {
-  "name": "@shadcn-angular/demo-app",
+  "name": "@component-library/demo-app",
   "version": "0.1.0",
   "private": true,
-  "description": "Demo application showcasing shadcn-angular components",
+  "description": "Demo application showcasing component library components",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

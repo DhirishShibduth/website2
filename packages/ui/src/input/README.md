@@ -5,7 +5,7 @@ A styled input component that works seamlessly with Angular forms.
 ## Usage
 
 ```typescript
-import { InputComponent } from '@shadcn-angular/ui/input';
+import { InputComponent } from '@component-library/ui/input';
 import { FormsModule } from '@angular/forms';
 
 @Component({

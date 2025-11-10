@@ -1,5 +1,5 @@
 {
-  "name": "@shadcn-angular/theme",
+  "name": "@component-library/theme",
   "version": "0.1.0",
   "description": "TailwindCSS theme configuration and design tokens",
   "main": "tailwind.config.js",
