@@ -49,6 +49,54 @@ const COMPONENTS_MAP = {
     dependencies: [],
     description: 'Small label for status or categories',
   },
+  label: {
+    name: 'Label',
+    files: ['label.component.ts'],
+    dependencies: [],
+    description: 'Accessible form label component',
+  },
+  'form-description': {
+    name: 'FormDescription',
+    files: ['form-description.component.ts'],
+    dependencies: [],
+    description: 'Helper text for form fields',
+  },
+  'form-message': {
+    name: 'FormMessage',
+    files: ['form-message.component.ts'],
+    dependencies: [],
+    description: 'Validation error messages',
+  },
+  checkbox: {
+    name: 'Checkbox',
+    files: ['checkbox.component.ts'],
+    dependencies: [],
+    description: 'Checkbox with reactive forms support',
+  },
+  radio: {
+    name: 'Radio',
+    files: ['radio.component.ts'],
+    dependencies: [],
+    description: 'Radio button with reactive forms support',
+  },
+  switch: {
+    name: 'Switch',
+    files: ['switch.component.ts'],
+    dependencies: [],
+    description: 'Toggle switch with reactive forms support',
+  },
+  textarea: {
+    name: 'Textarea',
+    files: ['textarea.component.ts'],
+    dependencies: [],
+    description: 'Multi-line text input with validation',
+  },
+  select: {
+    name: 'Select',
+    files: ['select.component.ts'],
+    dependencies: [],
+    description: 'Custom select dropdown with reactive forms',
+  },
 };
 
 /**
