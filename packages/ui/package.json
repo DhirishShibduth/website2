@@ -10,8 +10,8 @@
   ],
   "scripts": {
     "build": "tsc",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "ng run ui:storybook",
+    "build-storybook": "ng run ui:build-storybook"
   },
   "peerDependencies": {
     "@angular/animations": "^18.0.0",
@@ -21,9 +21,12 @@
     "tailwindcss": "^3.4.0"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^18.2.0",
     "@angular/animations": "^18.2.0",
+    "@angular/cli": "^18.2.0",
     "@angular/common": "^18.2.0",
     "@angular/compiler": "^18.2.0",
+    "@angular/compiler-cli": "^18.2.0",
     "@angular/core": "^18.2.0",
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
@@ -34,6 +37,7 @@
     "@storybook/blocks": "^8.0.0",
     "@storybook/test": "^8.0.0",
     "autoprefixer": "^10.4.16",
+    "ng-packagr": "^18.2.0",
     "postcss": "^8.4.32",
     "rxjs": "^7.8.0",
     "storybook": "^8.0.0",
