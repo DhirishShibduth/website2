@@ -2,10 +2,10 @@
  * Storybook Preview Configuration
  *
  * Configures global decorators, parameters, and styles for all stories
+ * Note: Global styles are loaded via angular.json styles configuration
  */
 
 import type { Preview } from '@storybook/angular';
-import '../../theme/globals.css';
 
 const preview: Preview = {
   parameters: {
