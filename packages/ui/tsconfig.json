@@ -19,8 +19,8 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@shadcn-angular/ui": ["./src"],
-      "@shadcn-angular/ui/*": ["./src/*"]
+      "@component-library/ui": ["./src"],
+      "@component-library/ui/*": ["./src/*"]
     }
   },
   "include": ["src/**/*"],
