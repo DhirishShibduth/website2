@@ -31,7 +31,32 @@ Unlike traditional component libraries installed via npm, component-library foll
 - **Card** - Versatile card with header, content, and footer sections
 - **Badge** - Small labels for status and categories
 
-## 🚀 Quick Start
+## 🛠️ Development Setup
+
+If you're contributing or want to run this project locally:
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd component-library
+
+# Install dependencies
+npm install
+
+# Build the CLI (required before using component-library commands)
+npm run build:cli
+
+# Now you can use the CLI locally
+npm run component-library init
+
+# Or run Storybook
+npm run storybook
+
+# Or run the demo app
+npm run demo
+```
+
+## 🚀 Quick Start (For End Users)
 
 ### Prerequisites
 
