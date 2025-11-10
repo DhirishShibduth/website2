@@ -245,6 +245,313 @@
         </ui-card>
       </div>
     </section>
+
+    <!-- Form Components Section -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4">Form Components</h2>
+
+      <!-- Checkboxes -->
+      <ui-card class="mb-6">
+        <ui-card-header>
+          <ui-card-title>Checkboxes</ui-card-title>
+          <ui-card-description>
+            Checkbox inputs with labels and descriptions
+          </ui-card-description>
+        </ui-card-header>
+        <ui-card-content>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-2">
+              <input type="checkbox" uiCheckbox id="check1" checked />
+              <label uiLabel for="check1" class="cursor-pointer">Accept terms and conditions</label>
+            </div>
+            <div class="flex items-start space-x-2">
+              <input type="checkbox" uiCheckbox id="check2" class="mt-1" />
+              <div class="grid gap-1.5 leading-none">
+                <label uiLabel for="check2" class="cursor-pointer">Marketing emails</label>
+                <p uiFormDescription>Receive emails about new products and features</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-2">
+              <input type="checkbox" uiCheckbox id="check3" disabled />
+              <label uiLabel for="check3" [disabled]="true">Disabled checkbox</label>
+            </div>
+          </div>
+        </ui-card-content>
+      </ui-card>
+
+      <!-- Radio Buttons -->
+      <ui-card class="mb-6">
+        <ui-card-header>
+          <ui-card-title>Radio Buttons</ui-card-title>
+          <ui-card-description>
+            Radio button groups for single selection
+          </ui-card-description>
+        </ui-card-header>
+        <ui-card-content>
+          <div class="space-y-3">
+            <div class="flex items-center space-x-2">
+              <input type="radio" uiRadio id="radio1" name="plan" value="free" checked />
+              <label uiLabel for="radio1" class="cursor-pointer">Free Plan</label>
+            </div>
+            <div class="flex items-start space-x-2">
+              <input type="radio" uiRadio id="radio2" name="plan" value="pro" class="mt-1" />
+              <div class="grid gap-1.5 leading-none">
+                <label uiLabel for="radio2" class="cursor-pointer">Pro Plan</label>
+                <p uiFormDescription>Advanced features for growing businesses</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-2">
+              <input type="radio" uiRadio id="radio3" name="plan" value="enterprise" class="mt-1" />
+              <div class="grid gap-1.5 leading-none">
+                <label uiLabel for="radio3" class="cursor-pointer">Enterprise Plan</label>
+                <p uiFormDescription>Custom solutions for large organizations</p>
+              </div>
+            </div>
+          </div>
+        </ui-card-content>
+      </ui-card>
+
+      <!-- Switches -->
+      <ui-card class="mb-6">
+        <ui-card-header>
+          <ui-card-title>Switches</ui-card-title>
+          <ui-card-description>
+            Toggle switches for settings and preferences
+          </ui-card-description>
+        </ui-card-header>
+        <ui-card-content>
+          <form [formGroup]="settingsForm" class="space-y-6">
+            <div class="flex items-start space-x-2">
+              <button type="button" uiSwitch id="switch1" formControlName="emailNotifications" class="mt-1"></button>
+              <div class="grid gap-1.5 leading-none">
+                <label uiLabel for="switch1" class="cursor-pointer">Email Notifications</label>
+                <p uiFormDescription>Receive notifications via email</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-2">
+              <button type="button" uiSwitch id="switch2" formControlName="pushNotifications" class="mt-1"></button>
+              <div class="grid gap-1.5 leading-none">
+                <label uiLabel for="switch2" class="cursor-pointer">Push Notifications</label>
+                <p uiFormDescription>Receive push notifications on your device</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-2">
+              <button type="button" uiSwitch id="switch3" formControlName="darkModeToggle" class="mt-1"></button>
+              <div class="grid gap-1.5 leading-none">
+                <label uiLabel for="switch3" class="cursor-pointer">Dark Mode</label>
+                <p uiFormDescription>Enable dark mode for better visibility at night</p>
+              </div>
+            </div>
+            <button type="button" uiButton (click)="handleSettingsSave()">Save Settings</button>
+          </form>
+        </ui-card-content>
+      </ui-card>
+
+      <!-- Textarea -->
+      <ui-card class="mb-6">
+        <ui-card-header>
+          <ui-card-title>Textarea</ui-card-title>
+          <ui-card-description>
+            Multi-line text input for longer content
+          </ui-card-description>
+        </ui-card-header>
+        <ui-card-content>
+          <div class="space-y-6 max-w-md">
+            <div class="space-y-2">
+              <label uiLabel for="textarea1">Bio</label>
+              <textarea uiTextarea id="textarea1" rows="4" placeholder="Tell us about yourself..."></textarea>
+              <p uiFormDescription>Brief description for your profile</p>
+            </div>
+            <div class="space-y-2">
+              <label uiLabel for="textarea2" [disabled]="true">Disabled Textarea</label>
+              <textarea uiTextarea id="textarea2" rows="3" disabled placeholder="This field is disabled"></textarea>
+            </div>
+          </div>
+        </ui-card-content>
+      </ui-card>
+
+      <!-- Select -->
+      <ui-card class="mb-6">
+        <ui-card-header>
+          <ui-card-title>Select Dropdowns</ui-card-title>
+          <ui-card-description>
+            Dropdown select components for choosing options
+          </ui-card-description>
+        </ui-card-header>
+        <ui-card-content>
+          <div class="space-y-6 max-w-md">
+            <div class="space-y-2">
+              <label uiLabel>Country</label>
+              <ui-select placeholder="Select a country...">
+                <ui-select-option value="us">United States</ui-select-option>
+                <ui-select-option value="uk">United Kingdom</ui-select-option>
+                <ui-select-option value="ca">Canada</ui-select-option>
+                <ui-select-option value="au">Australia</ui-select-option>
+              </ui-select>
+              <p uiFormDescription>Choose your country</p>
+            </div>
+            <div class="space-y-2">
+              <label uiLabel>Language</label>
+              <ui-select placeholder="Select a language...">
+                <ui-select-option value="en">English</ui-select-option>
+                <ui-select-option value="es">Spanish</ui-select-option>
+                <ui-select-option value="fr">French</ui-select-option>
+                <ui-select-option value="de">German</ui-select-option>
+              </ui-select>
+            </div>
+          </div>
+        </ui-card-content>
+      </ui-card>
+
+      <!-- Complete Contact Form -->
+      <ui-card>
+        <ui-card-header>
+          <ui-card-title>Complete Contact Form</ui-card-title>
+          <ui-card-description>
+            Comprehensive form with validation using all form components
+          </ui-card-description>
+        </ui-card-header>
+        <ui-card-content>
+          <form [formGroup]="contactForm" (ngSubmit)="handleContactSubmit()" class="space-y-6 max-w-md">
+            <!-- Full Name -->
+            <div class="space-y-2">
+              <label uiLabel for="fullName">
+                Full Name
+                <span class="text-destructive">*</span>
+              </label>
+              <input
+                uiInput
+                id="fullName"
+                type="text"
+                formControlName="fullName"
+                [class.border-destructive]="contactForm.get('fullName')?.invalid && contactForm.get('fullName')?.touched"
+                placeholder="John Doe"
+              />
+              <p uiFormMessage [error]="true" *ngIf="contactForm.get('fullName')?.hasError('required') && contactForm.get('fullName')?.touched">
+                Full name is required
+              </p>
+              <p uiFormMessage [error]="true" *ngIf="contactForm.get('fullName')?.hasError('minlength') && contactForm.get('fullName')?.touched">
+                Name must be at least 3 characters
+              </p>
+            </div>
+
+            <!-- Email -->
+            <div class="space-y-2">
+              <label uiLabel for="contactEmail">
+                Email Address
+                <span class="text-destructive">*</span>
+              </label>
+              <input
+                uiInput
+                id="contactEmail"
+                type="email"
+                formControlName="email"
+                [class.border-destructive]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
+                placeholder="john@example.com"
+              />
+              <p uiFormMessage [error]="true" *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched">
+                Email is required
+              </p>
+              <p uiFormMessage [error]="true" *ngIf="contactForm.get('email')?.hasError('email') && contactForm.get('email')?.touched">
+                Please enter a valid email address
+              </p>
+            </div>
+
+            <!-- Subject -->
+            <div class="space-y-2">
+              <label uiLabel for="subject">
+                Subject
+                <span class="text-destructive">*</span>
+              </label>
+              <ui-select formControlName="subject" placeholder="Select a subject...">
+                <ui-select-option value="general">General Inquiry</ui-select-option>
+                <ui-select-option value="support">Technical Support</ui-select-option>
+                <ui-select-option value="sales">Sales Question</ui-select-option>
+                <ui-select-option value="feedback">Feedback</ui-select-option>
+              </ui-select>
+              <p uiFormMessage [error]="true" *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched">
+                Please select a subject
+              </p>
+            </div>
+
+            <!-- Contact Method -->
+            <div class="space-y-3">
+              <label uiLabel>
+                Preferred Contact Method
+                <span class="text-destructive">*</span>
+              </label>
+              <div class="space-y-2">
+                <div class="flex items-center space-x-2">
+                  <input type="radio" uiRadio id="method-email" formControlName="contactMethod" value="email" />
+                  <label uiLabel for="method-email" class="cursor-pointer">Email</label>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <input type="radio" uiRadio id="method-phone" formControlName="contactMethod" value="phone" />
+                  <label uiLabel for="method-phone" class="cursor-pointer">Phone</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Country -->
+            <div class="space-y-2">
+              <label uiLabel for="country">
+                Country
+                <span class="text-destructive">*</span>
+              </label>
+              <ui-select formControlName="country" placeholder="Select your country...">
+                <ui-select-option value="us">United States</ui-select-option>
+                <ui-select-option value="uk">United Kingdom</ui-select-option>
+                <ui-select-option value="ca">Canada</ui-select-option>
+                <ui-select-option value="au">Australia</ui-select-option>
+                <ui-select-option value="de">Germany</ui-select-option>
+                <ui-select-option value="fr">France</ui-select-option>
+              </ui-select>
+              <p uiFormMessage [error]="true" *ngIf="contactForm.get('country')?.invalid && contactForm.get('country')?.touched">
+                Please select your country
+              </p>
+            </div>
+
+            <!-- Message -->
+            <div class="space-y-2">
+              <label uiLabel for="contactMessage">
+                Message
+                <span class="text-destructive">*</span>
+              </label>
+              <textarea
+                uiTextarea
+                id="contactMessage"
+                formControlName="message"
+                [class.border-destructive]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
+                rows="5"
+                placeholder="Type your message here..."
+              ></textarea>
+              <p uiFormDescription>
+                {{ contactForm.get('message')?.value?.length || 0 }} / 20 minimum characters
+              </p>
+              <p uiFormMessage [error]="true" *ngIf="contactForm.get('message')?.hasError('required') && contactForm.get('message')?.touched">
+                Message is required
+              </p>
+              <p uiFormMessage [error]="true" *ngIf="contactForm.get('message')?.hasError('minlength') && contactForm.get('message')?.touched">
+                Message must be at least 20 characters
+              </p>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="flex items-center space-x-2">
+              <input type="checkbox" uiCheckbox id="newsletter" formControlName="newsletter" />
+              <label uiLabel for="newsletter" class="cursor-pointer">
+                Subscribe to our newsletter
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" uiButton class="w-full">
+              Send Message
+            </button>
+          </form>
+        </ui-card-content>
+      </ui-card>
+    </section>
   </main>
 
   <!-- Footer -->
