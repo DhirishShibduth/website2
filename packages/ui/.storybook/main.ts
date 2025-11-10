@@ -1,7 +1,7 @@
 /**
  * Storybook Main Configuration
  *
- * Configures Storybook 10 for Angular with TailwindCSS support
+ * Configures Storybook 8 for Angular with TailwindCSS support
  */
 
 import type { StorybookConfig } from '@storybook/angular';
